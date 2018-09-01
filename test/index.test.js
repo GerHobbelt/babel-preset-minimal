@@ -1,5 +1,5 @@
 const test = require('ava')
-const babel = require('@babel/core')
+const babel = require('@gerhobbelt/babel-core')
 
 const snapshot = (title, input, opts) => {
   test(title, t => {

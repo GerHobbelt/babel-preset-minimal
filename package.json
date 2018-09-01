@@ -1,6 +1,6 @@
 {
-  "name": "babel-preset-minimal",
-  "version": "0.1.0",
+  "name": "@gerhobbelt/babel-preset-minimal",
+  "version": "0.1.0-1",
   "description": "A babel preset to produce minimal output.",
   "repository": {
     "url": "egoist/babel-preset-minimal",
@@ -12,24 +12,25 @@
   ],
   "scripts": {
     "test": "npm run lint && ava",
-    "lint": "xo"
+    "lint": "xo",
+    "pub": "npm publish --access public"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.49",
-    "@babel/preset-env": "^7.0.0-beta.49",
-    "@babel/preset-react": "^7.0.0-beta.49",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-plugin-transform-vue-jsx": "4",
+    "@gerhobbelt/babel-plugin-proposal-object-rest-spread": "^7.0.0-beta.530006",
+    "@gerhobbelt/babel-plugin-syntax-dynamic-import": "^7.0.0-beta.530006",
+    "@gerhobbelt/babel-preset-env": "^7.0.0-beta.530006",
+    "@gerhobbelt/babel-preset-react": "^7.0.0-beta.530006",
+    "babel-helper-vue-jsx-merge-props": "2.0.3",
+    "babel-plugin-transform-vue-jsx": "3.7.0",
     "fast-async": "^7.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.49",
+    "@gerhobbelt/babel-core": "^7.0.0-beta.530006",
     "ava": "^0.25.0",
     "eslint-config-rem": "^4.0.0",
-    "xo": "^0.18.0"
+    "xo": "^0.22.0"
   },
   "xo": {
     "extends": "rem"

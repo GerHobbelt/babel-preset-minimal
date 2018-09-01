@@ -1,7 +1,7 @@
 module.exports = (_, { jsx = 'react', mode } = {}) => {
   const presets = [
     [
-      require.resolve('@babel/preset-env'),
+      require.resolve('@gerhobbelt/babel-preset-env'),
       {
         modules: false,
         loose: mode === 'loose',
@@ -19,7 +19,7 @@ module.exports = (_, { jsx = 'react', mode } = {}) => {
       }
     ],
     jsx !== 'vue' && [
-      require.resolve('@babel/preset-react'),
+      require.resolve('@gerhobbelt/babel-preset-react'),
       {
         pragma: jsx === 'react' ? null : jsx
       }
@@ -27,7 +27,7 @@ module.exports = (_, { jsx = 'react', mode } = {}) => {
   ].filter(Boolean)
 
   const plugins = [
-    require.resolve('@babel/plugin-syntax-dynamic-import'),
+    require.resolve('@gerhobbelt/babel-plugin-syntax-dynamic-import'),
     jsx === 'vue' && require.resolve('babel-plugin-transform-vue-jsx'),
     mode !== 'modern' && [
       require.resolve('fast-async'),
@@ -36,7 +36,7 @@ module.exports = (_, { jsx = 'react', mode } = {}) => {
       }
     ],
     [
-      require.resolve('@babel/plugin-proposal-object-rest-spread'),
+      require.resolve('@gerhobbelt/babel-plugin-proposal-object-rest-spread'),
       {
         loose: true,
         useBuiltIns: true
